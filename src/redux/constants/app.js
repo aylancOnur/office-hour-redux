@@ -1,0 +1,7 @@
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+export const WITH_PAYLOAD = 'WITH_PAYLOAD';
+
+export const GET_PRODUCTS = 'GET_PRODUCTS';
+
+export const REQUEST_GET_ALL_PRODUCTS = 'REQUEST_GET_ALL_PRODUCTS';
