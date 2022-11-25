@@ -17,7 +17,7 @@ import {
   setWithPayload,
 } from '../../redux/actions/counter';
 
-import {getProducts, requestAllProducts} from '../../redux/actions/product';
+import {getProducts, requestAllProducts} from '../../redux/actions/products';
 
 const mapStateToProps = states => ({
   counter: states.counterReducer.counter,
@@ -30,7 +30,7 @@ const Home = connect(
   mapDispatchToProps,
 )(props => {
   const {counter, products, dispatch} = props;
-  console.log('PRODUCTS HOME', products.products);
+  console.log('PRODUCTS HOME', props);
 
   const [number, setNumber] = useState(0);
   // console.log('number', number);
@@ -42,6 +42,8 @@ const Home = connect(
   useEffect(() => {
     dispatch(requestAllProducts());
   }, []);
+
+  console.log(props.dispatch);
 
   return (
     <View style={{flex: 1}}>
